@@ -1,8 +1,18 @@
 package com.antyzero.atp.inject;
 
 
-import dagger.Component;
+import com.antyzero.atp.MainActivity;
+import com.antyzero.atp.inject.module.ActivityModule;
 
-@Component
+import dagger.Component;
+import dagger.Subcomponent;
+
+@Subcomponent(
+        modules = {
+                ActivityModule.class
+        }
+)
 public interface ActivityComponent {
+
+    void inject( MainActivity mainActivity );
 }
