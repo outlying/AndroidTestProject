@@ -1,5 +1,6 @@
-package com.antyzero.atp.network;
+package com.antyzero.atp.network.mock;
 
+import com.antyzero.atp.network.Api;
 import com.antyzero.atp.network.model.Post;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.mockwebserver.MockResponse;
