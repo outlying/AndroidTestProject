@@ -1,13 +1,14 @@
 package com.antyzero.atp;
 
-import android.app.Application;
 import android.test.ApplicationTestCase;
 
-/**
- * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
- */
-public class ApplicationTest extends ApplicationTestCase<Application> {
+public class ApplicationTest extends ApplicationTestCase<AtpApplication> {
+
     public ApplicationTest() {
-        super( Application.class );
+        super( AtpApplication.class );
+    }
+
+    public void testCreation() throws Exception {
+        createApplication();
     }
 }
