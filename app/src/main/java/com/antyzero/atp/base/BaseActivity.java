@@ -2,11 +2,14 @@ package com.antyzero.atp.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.trello.rxlifecycle.ActivityEvent;
 import com.trello.rxlifecycle.RxLifecycle;
 import com.trello.rxlifecycle.components.ActivityLifecycleProvider;
 
+import butterknife.ButterKnife;
 import rx.Observable;
 import rx.subjects.BehaviorSubject;
 
@@ -63,5 +66,23 @@ public class BaseActivity extends AppCompatActivity implements ActivityLifecycle
     protected void onDestroy() {
         lifecycleSubject.onNext( ActivityEvent.DESTROY );
         super.onDestroy();
+    }
+
+    @Override
+    public void setContentView( int layoutResID ) {
+        super.setContentView( layoutResID );
+        ButterKnife.bind( this );
+    }
+
+    @Override
+    public void setContentView( View view ) {
+        super.setContentView( view );
+        ButterKnife.bind( this );
+    }
+
+    @Override
+    public void setContentView( View view, ViewGroup.LayoutParams params ) {
+        super.setContentView( view, params );
+        ButterKnife.bind( this );
     }
 }

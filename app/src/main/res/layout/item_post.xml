@@ -3,16 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextureView
+    <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:textSize="18sp"/>
 
-    <TextureView
+    <TextView
         android:id="@+id/textViewContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:ellipsize="end"
+        android:maxLines="3"/>
 
 </LinearLayout>
